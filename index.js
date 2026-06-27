@@ -1,3 +1,8 @@
+const http = require('http');
+http.createServer((req, res) => {
+  res.write("Bot is alive!");
+  res.end();
+}).listen(process.env.PORT || 8080);
 const { Client, Collection, GatewayIntentBits, ChannelType, AuditLogEvent, Partials, EmbedBuilder, ApplicationCommandOptionType, Events, ActionRowBuilder, ButtonBuilder, AttachmentBuilder, ButtonStyle, Message } = require("discord.js");
 const moment = require('moment');
 const ms = require('ms')
